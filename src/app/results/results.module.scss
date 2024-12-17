@@ -1,0 +1,21 @@
+@import '../../styles/\ _variables.scss';
+
+.container {
+  text-align: center;
+
+  h1 {
+    font-size: $font-size-large;
+    margin-bottom: 16px;
+    color: $text-color;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      font-size: $font-size-small;
+      margin: 8px 0px;
+      color: $text-color;
+    }
+  }
+}

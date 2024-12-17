@@ -1,0 +1,167 @@
+{
+  "questions": [
+    {
+      "id": "gender",
+      "screenType": "text",
+      "question": "Select your gender:",
+      "options": [
+        { "id": "0", "title": "Female" },
+        { "id": "1", "title": "Male" }
+      ],
+      "nextQuestion": "relationship"
+    },
+    {
+      "id": "relationship",
+      "screenType": "text",
+      "question": "So we can get to know you better, tell us about your relationship status.",
+      "options": [
+        { "id": "0", "title": "Single" },
+        { "id": "1", "title": "In a relationship" }
+      ],
+      "nextQuestion": {
+        "0": "single-parent",
+        "1": "parent"
+      }
+    },
+    {
+      "id": "single-parent",
+      "screenType": "text",
+      "question": "Are you a single parent?",
+      "options": [
+        { "id": "0", "title": "Yes" },
+        { "id": "1", "title": "No" }
+      ],
+      "nextQuestion": "single-problem"
+    },
+    {
+      "id": "single-problem",
+      "screenType": "text",
+      "question": "Single {gender} {who have children (if have children)} need a slightly different approach to find their perfect partner. But first, how did you feel in your last relationship?",
+      "options": [
+        { "id": "0", "title": "I was unhappy with how things were going in my relationship" },
+        { "id": "1", "title": "I was unhappy with parts of my relationship, but some things were working" },
+        { "id": "2", "title": "I was generally happy with my relationship" },
+        { "id": "3", "title": "I've never been in a relationship" }
+      ],
+      "nextQuestion": "overthink"
+    },
+    {
+      "id": "overthink",
+      "screenType": "text",
+      "question": "Do you tend to overthink?",
+      "options": [
+        { "id": "0", "title": "Yes" },
+        { "id": "1", "title": "No" }
+      ],
+      "nextQuestion": "what-is"
+    },
+    {
+      "id": "what-is",
+      "screenType": "text",
+      "question": "So how does it work?",
+      "description": "We analyze hundreds of data points to create your unique astrological blueprint. This is combined with AI to tailor-make your astrological insights, based on your answers. We’re going to change your relationship with astrology.",
+      "descriptionType": "medium",
+      "options": [
+        { "id": "0", "title": "Next" }
+      ],
+      "nextQuestion": {
+        "previousAnswer": {
+          "overthink": {
+            "0": "most-important",
+            "1": "emotional-control"
+          }
+        }
+      }
+    },
+    {
+      "id": "most-important",
+      "screenType": "text",
+      "question": "What is most important to you?",
+      "options": [
+        { "id": "0", "title": "Success" },
+        { "id": "1", "title": "Romance" },
+        { "id": "2", "title": "Stability" },
+        { "id": "3", "title": "Freedom" }
+      ],
+      "nextQuestion": "about-us"
+    },
+    {
+      "id": "emotional-control",
+      "screenType": "text",
+      "question": "Is emotional control tricky for you?",
+      "options": [
+        { "id": "0", "title": "Yes" },
+        { "id": "1", "title": "Sometimes" },
+        { "id": "2", "title": "Rarely" },
+        { "id": "3", "title": "Not at all" }
+      ],
+      "nextQuestion": "about-us"
+    },
+    {
+      "id": "parent",
+      "screenType": "text",
+      "question": "Are you a parent?",
+      "options": [
+        { "id": "0", "title": "Yes" },
+        { "id": "1", "title": "No" }
+      ],
+      "nextQuestion": "relationship-problem"
+    },
+    {
+      "id": "relationship-problem",
+      "screenType": "text",
+      "question": "{Gender} {who have children (if have children)} need a slightly different approach to improve their relationship. Which statement best describes you?",
+      "options": [
+        { "id": "0", "title": "I'm very unhappy with how things are going in my relationship" },
+        { "id": "1", "title": "I'm unhappy with parts of my relationship, but some things were working well" },
+        { "id": "2", "title": "I'm generally happy in my relationship" }
+      ],
+      "nextQuestion": "partner-traits"
+    },
+    {
+      "id": "partner-traits",
+      "screenType": "text",
+      "question": "Is your partner an introvert or extrovert?",
+      "options": [
+        { "id": "0", "title": "Introvert" },
+        { "id": "1", "title": "Extrovert" },
+        { "id": "2", "title": "A bit of both" }
+      ],
+      "nextQuestion": "partner-gender"
+    },
+    {
+      "id": "partner-gender",
+      "screenType": "text",
+      "question": "What is your partner’s gender?",
+      "options": [
+        { "id": "0", "title": "Male" },
+        { "id": "1", "title": "Female" }
+      ],
+      "nextQuestion": "about-us"
+    },
+    {
+      "id": "about-us",
+      "screenType": "text",
+      "question": "Where did you hear about us?",
+      "options": [
+        { "id": "0", "title": "Poster or Billboard" },
+        { "id": "1", "title": "Friend or Family" },
+        { "id": "2", "title": "Instagram" },
+        { "id": "3", "title": "Direct Mail or Package Insert" },
+        { "id": "4", "title": "Online TV or Streaming TV" },
+        { "id": "5", "title": "TV" },
+        { "id": "6", "title": "Radio" },
+        { "id": "7", "title": "Search Engine (Google, Bing, etc.)" },
+        { "id": "8", "title": "Newspaper or Magazine" },
+        { "id": "9", "title": "Facebook" },
+        { "id": "10", "title": "Blog Post or Website Review" },
+        { "id": "11", "title": "Podcast" },
+        { "id": "12", "title": "Influencer" },
+        { "id": "13", "title": "YouTube" },
+        { "id": "14", "title": "Pinterest" },
+        { "id": "15", "title": "Other" }
+      ],
+      "nextQuestion": ""
+    }
+  ]
+}
