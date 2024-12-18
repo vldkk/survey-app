@@ -1,24 +1,25 @@
 'use client';
 
 import { saveAnswer } from '@/store/slices/answersSlice';
-import { getNextQuestionId } from '@/utils/getNextQuestionId';
+import { getNextQuestionId } from '@/utils';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
 import { useDispatch, useSelector } from 'react-redux';
 import IconArrowBack from '@/components/icons/IconArrowBack';
 import TextQuestion from '@/components/TextQuestion/TextQuestion';
-import { OptionType, QuestionType } from '@/models/question';
+import { OptionType, QuestionType } from '@/models';
 
 import styles from './Question.module.scss';
-import { selectAnswers } from '@/store/selectors/answers';
+import { selectAnswers } from '@/store/selectors';
 
 type Props = {
+  surveyId: string;
   question: QuestionType;
   questions: QuestionType[];
 };
 
 const Question = (props: Props) => {
-  const { question, questions } = props;
+  const { question, questions, surveyId } = props;
 
   const router = useRouter();
   const dispatch = useDispatch();
@@ -35,7 +36,11 @@ const Question = (props: Props) => {
     dispatch(saveAnswer({ questionId: question.id, answer }));
     const nextQuestionId = getNextQuestionId(question, updatedAnswers);
 
-    router.push(nextQuestionId ? `/questions/${nextQuestionId}` : '/results');
+    router.push(
+      nextQuestionId
+        ? `/surveys/${surveyId}/questions/${nextQuestionId}`
+        : '/results'
+    );
   };
 
   return (

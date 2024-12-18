@@ -137,6 +137,32 @@
         { "id": "0", "title": "Male" },
         { "id": "1", "title": "Female" }
       ],
+      "nextQuestion": "partner-priority"
+    },
+    {
+      "id": "partner-priority",
+      "screenType": "text",
+      "question": "Do you agree with the statement below?",
+      "description": "“My partner and I make sex a priority in our relationship”",
+      "descriptionType": "bold",
+      "options": [
+        { "id": "0", "title": "Strongly agree" },
+        { "id": "1", "title": "Agree" },
+        { "id": "2", "title": "Neutral" },
+        { "id": "3", "title": "Disagree" },
+        { "id": "4", "title": "Strongly disagree" }
+      ],
+      "nextQuestion": "relationship-goals"
+    },
+    {
+      "id": "relationship-goals",
+      "screenType": "text",
+      "question": "When you think about your relationship goals, you feel...?",
+      "options": [
+        { "id": "0", "title": "Optimistic! They are totally doable, with some guidance." },
+        { "id": "1", "title": "Cautious. I’ve struggled before, but I’m hopeful." },
+        { "id": "2", "title": "I’m feeling a little anxious, honestly." }
+      ],
       "nextQuestion": "about-us"
     },
     {

@@ -6,11 +6,12 @@ export const replaceDynamicValues = (
 ): string =>
   template.replace(/\{([^}]+)\}/g, (_, key) => {
     if (key === 'Gender') {
-      return answers['gender'].title || '';
+      return answers['gender']?.title || '';
     }
 
     if (key === 'who have children (if have children)') {
-      return answers['single-parent']?.title === 'Yes'
+      return answers['single-parent']?.title === 'Yes' ||
+        answers['parent']?.title === 'Yes'
         ? 'who have children'
         : '';
     }

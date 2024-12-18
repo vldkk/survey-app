@@ -1,4 +1,4 @@
-import { OptionType } from '@/models/question';
+import { OptionType } from '@/models';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 
 interface AnswersState {

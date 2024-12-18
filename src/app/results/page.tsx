@@ -11,13 +11,15 @@ export default function ResultsPage() {
   return (
     <main className={styles.container}>
       <h1>Survey Results</h1>
-      <ul>
-        {Object.entries(answers).map(([questionId, answer]) => (
-          <li key={questionId}>
-            {questionId}: {answer.title}
-          </li>
-        ))}
-      </ul>
+      <div className={styles.resultsCard}>
+        <ul>
+          {Object.entries(answers).map(([questionId, answer]) => (
+            <li key={questionId}>
+              <strong>{questionId}:</strong> {answer.title}
+            </li>
+          ))}
+        </ul>
+      </div>
     </main>
   );
 }

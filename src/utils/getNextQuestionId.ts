@@ -1,4 +1,4 @@
-import { QuestionType } from '@/models/question';
+import { QuestionType } from '@/models';
 import { RootState } from '@/store/store';
 
 export const getNextQuestionId = (

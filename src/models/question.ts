@@ -1,7 +1,4 @@
-export interface OptionType {
-  id: string;
-  title: string;
-}
+import { OptionType } from './option';
 
 export interface QuestionType {
   id: string;

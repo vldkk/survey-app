@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import styles from './TextQuestion.module.scss';
 import { RootState } from '@/store/store';
-import { replaceDynamicValues } from '@/utils/replaceDynamicValues';
-import { OptionType, QuestionType } from '@/models/question';
+import { replaceDynamicValues } from '@/utils';
+import { OptionType, QuestionType } from '@/models';
 
 interface TextQuestionProps {
   question: QuestionType;
